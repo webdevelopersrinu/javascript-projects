@@ -1,0 +1,120 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.products{
+    width: 100%;
+    background-color: #a5cfe7;
+    padding: 10px 20px;
+}
+.product-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:20px;
+}
+.product-iteam{
+    background-color: #fff;
+    width: 30%;
+    max-width: 30%;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.477);
+}
+.product-img{
+    width: 100%;
+    aspect-ratio: 3/1;
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    object-fit: contain;
+}
+.product-title{
+    font-size: 21px;
+    font-weight: 700;
+    margin: 3px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+.product-description{
+    margin: 3px 0;
+    font-size: 16px;
+    text-wrap:wrap;
+    height: 55px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+.product-price{
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.priceing{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.del-price{
+    text-decoration: line-through;
+    color: #8dd1f9;
+}
+.price{
+    font-size: 19px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.836);
+}
+.heart-icon i{
+    font-size: 19px;
+    padding-right: 12px;
+    color:#d64141;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 4px 0;
+}
+.rating-icons i{
+    color: #0e97e6;
+}
+.rating span{
+    font-size: 16px;
+    background-color: #8dd1f979;
+    padding: 1px 9px;
+    border-radius: 3px;
+    color: #00a2ff;
+}
+.btn-card{
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 6px 0px;
+}
+@media screen and (max-width:900Px) {
+    .product-iteam{
+        width: 40%;
+        max-width: 40%;
+    }
+}
+@media screen and (max-width:600Px) {
+    .product-iteam{
+        width: 80%;
+        max-width: 80%;
+    }
+    .product-inner{
+        justify-content: center;
+    }
+}

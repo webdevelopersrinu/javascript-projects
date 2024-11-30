@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    text-transform: capitalize;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 2px solid black;
+}
+nav .user-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+
+}
+nav .user-info img{
+    border-radius: 50%;
+}
+nav .user-info .drop-down{
+    position: absolute;
+    top: 45px;
+    right: 5px;
+    background-color: white;
+    padding: 34px 12px;
+    box-shadow: 0 0 2px rgba(24, 25, 24, 0.37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+nav .user-info .drop-down ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 12px 24px;
+    margin-bottom: 35px;
+    padding-right: 34px;
+    text-wrap: nowrap;
+}
+nav .user-info .drop-down ul li{
+    cursor: pointer;
+}
+nav .user-info .drop-down ul li:hover{
+    color: rgb(8, 135, 247);
+}
+.drop-down .toggler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drop-down .toggler #check{
+    display: none;
+}
+.drop-down .toggler .button{
+    width: 50px;
+    height: 19px;
+    border-radius: 15px;
+    background-color: rgba(220, 220, 220, 0.852);
+    cursor: pointer;
+    position: relative;
+    transition:all 0.9s;
+}
+.drop-down .toggler .button::before{
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    width:17px ;
+    height: 17px;
+    border-radius: 50%;
+    margin: 1px;
+    box-shadow:  0 0 4px rgba(18, 18, 17, 0.42);
+}
+.drop-down input:checked + .button{
+    background-color: black;
+}
+.drop-down input:checked + .button::before{
+    transform: translateX(30px);
+}
+/* main section */
+main{
+    display: flex;
+}
+.said-menu{
+    width: 15%;
+    border-right: 2px solid black;
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.said-menu ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    width: 90%;
+}
+.said-menu ul li{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   padding: 14px 6px;
+   gap: 5px;  
+}
+.said-menu ul li i{
+    font-size: 18px !important;
+    padding-right:14px;
+}
+.said-menu ul li span{
+    text-wrap: nowrap;
+}
+.said-menu .settings{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px 12px;
+    margin-bottom: 31px;
+}
+.main-content{
+    width: 85%;
+}
+/* refferals-earnings section */
+.refferals-earnings{
+    padding: 15px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.refferals-earnings .color{
+    background-color: blueviolet;
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+}
+.refferals-earnings .color .icon{
+    font-size: 55px;
+}
+.refferals-earnings .color .txt{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.refferals-earnings .color .txt h4{
+    font-size: 21px;
+}
+.refferals-earnings .color .txt span{
+    font-weight: 400;
+}
+/* card section */
+.card-section{
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.card{
+    max-width: 350px;
+    width: 230px;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: 0px 0px 2px rgba(49, 47, 47, 0.461);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 17px;
+}
+.card .card-img{
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card img{
+    width: 70%;
+    height: auto;
+}
+.card .card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+.card .card-info .card-text{
+    font-size: 15px;
+}
+.card .card-info .btn{
+    width: 100%;
+    background-color: rgb(8, 135, 247);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    text-transform: capitalize;
+}
+/* login page section */
+.container{
+    position: relative;
+}
+.login-page{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.login-section{
+    width: 40%;
+    height: 80%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 45px;
+    border-radius: 9px;
+    position: relative;
+}
+.login-img{
+    width: 40%;
+}
+.login-img img{
+    width: 100%;
+}
+.login-info{
+    width: 60%;
+    margin-right: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+}
+.login-info h3{
+    padding-bottom: 19px;
+}
+.login-form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px 0;
+}
+.login-form div input{
+    border: none;
+    outline: none;
+    padding: 7px 5px;
+    box-shadow:  0 0 3px rgba(0, 0, 0, 0.379);
+    border-radius: 6px;
+}
+.login-form div input::placeholder{
+    color: gray;
+}
+.login-form .login label{
+    color:rgb(8, 135, 247);
+    font-size: 13px;
+}
+.login-form .login button{
+    background-color:rgb(8, 135, 247) ;
+    padding: 7px 0;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    text-transform: capitalize;
+
+}
+.not-account{
+    font-size: 13px;
+}
+.login-section .close-btn{
+    color: rebeccapurple;
+    position: absolute;
+    font-size: 35px;
+    font-weight: 700;
+    top: 20px;
+    cursor: pointer;
+    right: 20px;
+}

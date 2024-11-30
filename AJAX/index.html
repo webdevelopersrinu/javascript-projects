@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax request</title>
+    <style>
+        .fa-table{
+            overflow-x: scroll;
+            scrollbar-width: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>hello srinu</h1>
+    <div class="fa-table">
+      <table border="2px" cellspaceing="0" cellpadding="6px">
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>website</th>
+        </thead>
+        <tbody id="dd">
+            
+        </tbody>
+    </table>
+    </div>
+ 
+    <script>
+        let xhr=new XMLHttpRequest()
+        xhr.open("get","https://jsonplaceholder.typicode.com/users",true);
+        xhr.addEventListener("load",()=>{
+            let data=JSON.parse(xhr.responseText)
+            let tbody=document.getElementById("dd");
+            data.forEach((arr)=>{
+                    let display=`<tr>
+                    <td>${arr.id}</td>
+                    <td>${arr.name}</td>
+                    <td>${arr.username}</td>
+                    <td>${arr.email}</td>
+                    <td>${arr.phone}</td>
+                    <td>${arr.website}</td>
+                    </tr>`
+                tbody.insertAdjacentHTML("beforeend",display);
+            })
+        })
+        
+        xhr.send() 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background chenger</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .color{
+            display: block;
+            width: 40px ;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgb(255, 0, 217);
+            margin: 6px 12px;
+        }
+        .btn{
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: white;
+            padding: 5px 10px;
+            background-color: rgb(221, 0, 255);
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 10px;
+            flex-wrap: wrap;
+            background-color: aliceblue;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.425);
+            border-radius: 8px;
+            padding: 12px 24px;
+        }
+        .color-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="color-item">
+            <span class="color" id="red"></span>
+            <button class="btn" onclick="red()">red</button>
+        </div>
+        <div class="color-item">
+            <span class="color" id="green"></span>
+            <button class="btn" onclick="green()">green</button>
+        </div>
+        <div class="color-item">
+            <span class="color" id="blue"></span>
+            <button class="btn" onclick="blue()">blue</button>
+        </div>
+        <div class="color-item">
+            <span class="color" id="yellow"></span>
+            <button class="btn" onclick="yellow()">yellow</button>
+        </div>
+        <div class="color-item">
+            <span class="color" id="orange"></span>
+            <button class="btn" onclick="orange()">orange</button>
+        </div>
+        <div class="color-item">
+            <span class="color" id="pink"></span>
+            <button class="btn" onclick="pink()">pink</button>
+        </div>
+    </div>
+    <script>
+        function red(){
+            document.getElementById("red").style.backgroundColor="red";
+        }
+        function green(){
+            document.getElementById("green").style.backgroundColor="green";
+        }
+        function blue(){
+            document.getElementById("blue").style.backgroundColor="blue";
+        }
+        function yellow(){
+            document.getElementById("yellow").style.backgroundColor="yellow";
+        }
+        function orange(){
+            document.getElementById("orange").style.backgroundColor="orange";
+        }
+        function pink(){
+            document.getElementById("pink").style.backgroundColor="pink";
+        }
+
+    </script>
+</body>
+</html>
